@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Notes</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-gray-900 text-white text-center py-8">
+        <h1 class="text-4xl font-bold">JavaScript Notes</h1>
+        <p class="mt-2 text-gray-300">Basic JavaScript Concepts</p>
+    </header>
+
+    <main class="max-w-5xl mx-auto p-6">
+
+        <!-- What is JS -->
+        <section class="bg-white p-6 rounded-xl shadow mb-6">
+            <h2 class="text-2xl font-bold text-red-700 mb-4">
+                1. What is JavaScript?
+            </h2>
+
+            <p class="text-lg">
+                JavaScript is a programming language used to make websites
+                interactive, dynamic and responsive.
+            </p>
+        </section>
+
+
+        <!-- Variables -->
+        <section class="bg-white p-6 rounded-xl shadow mb-6">
+            <h2 class="text-2xl font-bold text-red-700 mb-4">
+                2. Variable Names in JavaScript
+            </h2>
+
+            <p class="mb-4">
+                A variable is used to store data in JavaScript.
+            </p>
+
+            <pre class="bg-gray-900 text-green-400 p-5 rounded-lg overflow-x-auto"><code>let name = "Samjana";
+let age = 24;
+let firstName = "Samjana";
+let lastName = "Bhandari";
+let studentName = "Samjana";
+let phoneNumber = 9876543210;
+let emailAddress = "samjana@gmail.com";
+let totalMarks = 450;
+let dateOfBirth = "30-07-2000";
+let userName = "samjana123";
+let password = "12345";
+let address = "Chennai";
+let city = "Chennai";
+let country = "India";
+let collegeName = "BMCCW";
+
+const courseName = "MSc IT";
+const salary = 25000;
+const productPrice = 500;
+const totalAmount = 1500;
+const count = 10;
+const number = 100;
+const isActive = true;
+const isLoggedIn = false;
+const userDetails = "Student";
+const studentId = 101;
+const employeeId = 202;
+const maxValue = 1000;
+const minValue = 10;
+const _username = "student";
+const $price = 999;</code></pre>
+        </section>
+
+
+        <!-- Expressions -->
+        <section class="bg-white p-6 rounded-xl shadow mb-6">
+            <h2 class="text-2xl font-bold text-red-700 mb-4">
+                3. Expressions
+            </h2>
+
+            <p class="mb-4">
+                An expression is something that produces a value.
+            </p>
+
+            <pre class="bg-gray-900 text-green-400 p-5 rounded-lg"><code>10 + 20
+x + y
+a * b
+age >= 18
+name + " Kumar"
+x = 10</code></pre>
+
+            <h3 class="text-xl font-semibold mt-5 mb-3">
+                Types of Expressions
+            </h3>
+
+            <ul class="list-disc list-inside space-y-2">
+                <li>Arithmetic Expression</li>
+                <li>Comparison Expression</li>
+                <li>Logical Expression</li>
+                <li>Assignment Expression</li>
+                <li>String Expression</li>
+                <li>Conditional Expression</li>
+            </ul>
+        </section>
+
+
+        <!-- Statements -->
+        <section class="bg-white p-6 rounded-xl shadow mb-6">
+            <h2 class="text-2xl font-bold text-red-700 mb-4">
+                4. Statements
+            </h2>
+
+            <p class="mb-4">
+                A statement is an instruction given to JavaScript
+                to perform an action.
+            </p>
+
+            <pre class="bg-gray-900 text-green-400 p-5 rounded-lg overflow-x-auto"><code>let name = "Samjana";
+
+const age = 24;
+
+console.log(name);
+
+if (age >= 18) {
+    console.log("Adult");
+}
+
+for (let i = 0; i < 5; i++) {
+    console.log(i);
+}</code></pre>
+
+            <h3 class="text-xl font-semibold mt-5 mb-3">
+                Types of Statements
+            </h3>
+
+            <ol class="list-decimal list-inside space-y-2">
+                <li>Variable Declaration</li>
+                <li>Assignment Statement</li>
+                <li>if Statement</li>
+                <li>if...else Statement</li>
+                <li>switch Statement</li>
+                <li>for Loop</li>
+                <li>while Loop</li>
+                <li>do...while Loop</li>
+                <li>break Statement</li>
+                <li>continue Statement</li>
+                <li>return Statement</li>
+            </ol>
+        </section>
+
+
+        <!-- Difference -->
+        <section class="bg-white p-6 rounded-xl shadow mb-6">
+            <h2 class="text-2xl font-bold text-red-700 mb-4">
+                5. Expression vs Statement
+            </h2>
+
+            <div class="grid md:grid-cols-2 gap-4">
+
+                <div class="bg-blue-50 p-5 rounded-lg">
+                    <h3 class="text-xl font-bold text-blue-700">
+                        Expression
+                    </h3>
+                    <p class="mt-2">
+                        Produces a value.
+                    </p>
+
+                    <pre class="bg-gray-900 text-green-400 p-3 rounded mt-3"><code>10 + 5
+age > 18
+x * 2</code></pre>
+                </div>
+
+                <div class="bg-green-50 p-5 rounded-lg">
+                    <h3 class="text-xl font-bold text-green-700">
+                        Statement
+                    </h3>
+                    <p class="mt-2">
+                        Performs an action.
+                    </p>
+
+                    <pre class="bg-gray-900 text-green-400 p-3 rounded mt-3"><code>let x = 10;
+console.log(x);
+
+if (age > 18) { }</code></pre>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- Variable Rules -->
+        <section class="bg-white p-6 rounded-xl shadow">
+            <h2 class="text-2xl font-bold text-red-700 mb-4">
+                6. Rules for Variable Names
+            </h2>
+
+            <ul class="list-disc list-inside space-y-2">
+                <li>Can contain letters.</li>
+                <li>Can contain numbers, but not at the beginning.</li>
+                <li>Can use underscore <b>_</b>.</li>
+                <li>Can use dollar sign <b>$</b>.</li>
+                <li>Cannot start with a number.</li>
+                <li>Cannot contain spaces.</li>
+                <li>Cannot use reserved keywords.</li>
+                <li>Variable names are case-sensitive.</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer class="bg-gray-900 text-white text-center py-5 mt-8">
+        JavaScript Study Notes
+    </footer>
+
+</body>
+</html>
