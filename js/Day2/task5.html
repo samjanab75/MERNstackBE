@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Pattern</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="min-h-screen bg-[#af5082] flex items-center justify-center">
+
+    <div class="bg-white p-8 rounded-2xl shadow-2xl">
+        <h1 class="text-2xl font-bold text-[#af5082] mb-4">
+            TASK 5 - NUMBER PATTERN
+        </h1>
+
+        <div class="bg-[#78b14e] text-white p-4 rounded-xl">
+            <p class="font-semibold">
+                Open F12 → Console to see the pattern
+            </p>
+        </div>
+    </div>
+
+    <script>
+        for (let s = 1; s <= 5; s++) {
+
+            let pattern = "";
+
+            for (let j = s; j <= s; j++) {
+                pattern += j + " ";
+            }
+
+            console.log(pattern);
+        }
+    </script>
+
+</body>
+</html>
