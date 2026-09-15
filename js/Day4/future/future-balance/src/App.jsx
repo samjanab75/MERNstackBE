@@ -9,28 +9,13 @@ import Balance from "./pages/Balance";
 function App() {
   return (
     <BrowserRouter>
-
       <Navbar />
 
       <Routes>
-
-        <Route
-          path="/"
-          element={<Home />}
-        />
-
-        <Route
-          path="/jobs"
-          element={<Jobs />}
-        />
-
-        <Route
-          path="/balance"
-          element={<Balance />}
-        />
-
+        <Route path="/" element={<Home />} />
+        <Route path="/jobs" element={<Jobs />} />
+        <Route path="/balance" element={<Balance />} />
       </Routes>
-
     </BrowserRouter>
   );
 }
