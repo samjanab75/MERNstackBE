@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Callback - Get User</title>
+</head>
+<body>
+
+    <h2>Get User Using Callback</h2>
+
+    <script>
+
+        const getUser = (callback) => {
+
+            const user = {
+                name: "Sam",
+                age: 25
+            };
+
+            callback(user);
+        };
+
+
+        getUser((user) => {
+
+            console.log("User Name:", user.name);
+            console.log("User Age:", user.age);
+
+        });
+
+    </script>
+
+</body>
+</html>
