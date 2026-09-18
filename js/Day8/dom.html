@@ -1,0 +1,66 @@
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Electricity Bill</title>
+
+    <script>
+        function calculateBill() {
+
+         
+            let customerName = document.getElementById("customerName").value;
+ 
+            let unitsConsumed = Number(
+                document.getElementById("units").value
+            );
+
+            let bill = 0;
+
+           
+            if (unitsConsumed <= 100) {
+
+                bill = unitsConsumed * 2;
+
+            } else if (unitsConsumed <= 200) {
+
+                bill = (100 * 2) + ((unitsConsumed - 100) * 3);
+
+            } else {
+
+                bill = (100 * 2) +
+                       (100 * 3) +
+                       ((unitsConsumed - 200) * 5);
+            }
+
+            
+            document.getElementById("result").innerHTML =
+                "Customer Name: " + customerName +
+                "<br>Units Consumed: " + unitsConsumed +
+                "<br>Electricity Bill: ₹" + bill;
+        }
+    </script>
+</head>
+
+<body>
+
+    <h2>Electricity Bill Calculator</h2>
+
+    <label>Customer Name:</label>
+    <input type="text" id="customerName">
+
+    <br><br>
+
+    <label>Units Consumed:</label>
+    <input type="number" id="units">
+
+    <br><br>
+
+    <button onclick="calculateBill()">
+        Calculate Bill
+    </button>
+
+    <h3 id="result"></h3>
+
+</body>
+</html>
+```
