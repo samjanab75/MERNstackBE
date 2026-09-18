@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GreenTech JavaScript Learning System</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        .topic {
+            background-color: #F7F9F3;
+            border-left: 4px solid #2C5F2D;
+            padding: 14px;
+            border-radius: 10px;
+            font-weight: 600;
+            color: #2C5F2D;
+            text-align: left;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .topic:hover {
+            background-color: #97BC62;
+            transform: translateY(-2px);
+        }
+
+        .topic.active {
+            background-color: #2C5F2D;
+            color: white;
+        }
+
+        pre {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body class="bg-[#F7F9F3] text-gray-800">
+
+    <!-- =====================================================
+         NAVBAR
+    ====================================================== -->
+
+    <nav class="bg-[#2C5F2D] text-white">
+
+        <div class="max-w-7xl mx-auto px-6 py-5
+                    flex flex-col md:flex-row
+                    justify-between items-center gap-2">
+
+            <h1 class="text-2xl font-bold">
+                GreenTech
+            </h1>
+
+            <p class="text-[#97BC62] font-semibold">
+                JavaScript Learning System
+            </p>
+
+        </div>
+
+    </nav>
+
+
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
+
+    <section class="max-w-7xl mx-auto px-6 py-12">
+
+        <div class="bg-[#2C5F2D] rounded-3xl
+                    p-8 md:p-12 text-white">
+
+            <p class="text-[#97BC62] font-bold mb-3">
+                JAVASCRIPT PRACTICE PROJECT
+            </p>
+
+            <h2 class="text-4xl md:text-5xl font-bold mb-5">
+                JavaScript Day 1 to Day 8
+            </h2>
+
+            <p class="text-gray-200 max-w-3xl leading-7 mb-7">
+                Learn JavaScript from basic concepts to
+                functions, array methods, objects, promises,
+                DOM, storage and API operations.
+            </p>
+
+            <button id="startBtn"
+                class="bg-[#97BC62]
+                       text-[#2C5F2D]
+                       px-6 py-3
+                       rounded-xl
+                       font-bold
+                       hover:bg-white
+                       transition">
+
+                Start Learning
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         PROJECT INFORMATION
+    ====================================================== -->
+
+    <section class="max-w-7xl mx-auto px-6 pb-10">
+
+        <div class="grid md:grid-cols-3 gap-5">
+
+            <div class="bg-white rounded-2xl shadow p-6">
+
+                <p class="text-gray-500">
+                    Learning Days
+                </p>
+
+                <h3 class="text-3xl font-bold text-[#2C5F2D] mt-2">
+                    8
+                </h3>
+
+            </div>
+
+
+            <div class="bg-white rounded-2xl shadow p-6">
+
+                <p class="text-gray-500">
+                    Topics
+                </p>
+
+                <h3 id="topicCount"
+                    class="text-3xl font-bold text-[#2C5F2D] mt-2">
+                    0
+                </h3>
+
+            </div>
+
+
+            <div class="bg-white rounded-2xl shadow p-6">
+
+                <p class="text-gray-500">
+                    Project
+                </p>
+
+                <h3 class="text-xl font-bold text-[#2C5F2D] mt-2">
+                    JavaScript Learning
+                </h3>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         DAY 1
+    ====================================================== -->
+
+    <section class="max-w-7xl mx-auto px-6 pb-10">
+
+        <div class="bg-[#2C5F2D] text-white
+                    rounded-t-2xl p-5">
+
+            <h2 class="text-2xl font-bold">
+                Day 1 – JavaScript Basic to Core
+            </h2>
+
+            <p class="text-[#97BC62] mt-1">
+                JavaScript fundamentals
+            </p>
+
+        </div>
+
+
+        <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4
+                    gap-4 bg-white p-6 rounded-b-2xl shadow">
+
+            <button class="topic" data-topic="variables">
+                Variables
+            </button>
+
+            <button class="topic" data-topic="letconst">
+                var / let / const
+            </button>
+
+            <button class="topic" data-topic="datatypes">
+                Data Types
+            </button>
+
+            <button class="topic" data-topic="primitive">
+                Primitive Data Types
+            </button>
+
+            <button class="topic" data-topic="nonprimitive">
+                Non-Primitive Data Types
+            </button>
+
+            <button class="topic" data-topic="operators">
+                Operators
+            </button>
+
+            <button class="topic" data-topic="expressions">
+                Expressions
+            </button>
+
+            <button class="topic" data-topic="statements">
+                Statements
+            </button>
+
+            <button class="topic" data-topic="conversion">
+                Type Conversion
+            </button>
+
+            <button class="topic" data-topic="template">
+                Template Literals
+            </button>
+
+            <button class="topic" data-topic="truthy">
+                Truthy / Falsy
+            </button>
+
+            <button class="topic" data-topic="scope">
+                Scope
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         DAY 2
+    ====================================================== -->
+
+    <section class="max-w-7xl mx-auto px-6 pb-10">
+
+        <div class="bg-[#2C5F2D] text-white
+                    rounded-t-2xl p-5">
+
+            <h2 class="text-2xl font-bold">
+                Day 2 – Basic & Looping
+            </h2>
+
+            <p class="text-[#97BC62] mt-1">
+                Conditions and loops
+            </p>
+
+        </div>
+
+
+        <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4
+                    gap-4 bg-white p-6 rounded-b-2xl shadow">
+
+            <button class="topic" data-topic="if">
+                if
+            </button>
+
+            <button class="topic" data-topic="else">
+                else
+            </button>
+
+            <button class="topic" data-topic="elseif">
+                else if
+            </button>
+
+            <button class="topic" data-topic="ternary">
+                Ternary Operator
+            </button>
+
+            <button class="topic" data-topic="for">
+                for Loop
+            </button>
+
+            <button class="topic" data-topic="while">
+                while Loop
+            </button>
+
+            <button class="topic" data-topic="dowhile">
+                do while Loop
+            </button>
+
+            <button class="topic" data-topic="nested">
+                Nested Loop
+            </button>
+
+            <button class="topic" data-topic="break">
+                break
+            </button>
+
+            <button class="topic" data-topic="continue">
+                continue
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         DAY 3
+    ====================================================== -->
+
+    <section class="max-w-7xl mx-auto px-6 pb-10">
+
+        <div class="bg-[#2C5F2D] text-white
+                    rounded-t-2xl p-5">
+
+            <h2 class="text-2xl font-bold">
+                Day 3 – Functions
+            </h2>
+
+            <p class="text-[#97BC62] mt-1">
+                Reusable JavaScript logic
+            </p>
+
+        </div>
+
+
+        <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4
+                    gap-4 bg-white p-6 rounded-b-2xl shadow">
+
+            <button class="topic" data-topic="function">
+                Normal Function
+            </button>
+
+            <button class="topic" data-topic="parameters">
+                Parameters
+            </button>
+
+            <button class="topic" data-topic="arguments">
+                Arguments
+            </button>
+
+            <button class="topic" data-topic="return">
+                return
+            </button>
+
+            <button class="topic" data-topic="arrow">
+                Arrow Function
+            </button>
+
+            <button class="topic" data-topic="callback">
+                Callback Function
+            </button>
+
+            <button class="topic" data-topic="higherorder">
+                Higher Order Function
+            </button>
+
+            <button class="topic" data-topic="closure">
+                Closure
+            </button>
+
+            <button class="topic" data-topic="hoisting">
+                Hoisting
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         DAY 4
+    ====================================================== -->
+
+    <section class="max-w-7xl mx-auto px-6 pb-10">
+
+        <div class="bg-[#2C5F2D] text-white
+                    rounded-t-2xl p-5">
+
+            <h2 class="text-2xl font-bold">
+                Day 4 – Higher Order Array Methods
+            </h2>
+
+            <p class="text-[#97BC62] mt-1">
+                Powerful array operations
+            </p>
+
+        </div>
+
+
+        <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4
+                    gap-4 bg-white p-6 rounded-b-2xl shadow">
+
+            <button class="topic" data-topic="foreach">
+                forEach()
+            </button>
+
+            <button class="topic" data-topic="map">
+                map()
+            </button>
+
+            <button class="topic" data-topic="filter">
+                filter()
+            </button>
+
+            <button class="topic" data-topic="find">
+                find()
+            </button>
+
+            <button class="topic" data-topic="findindex">
+                findIndex()
+            </button>
+
+            <button class="topic" data-topic="some">
+                some()
+            </button>
+
+            <button class="topic" data-topic="every">
+                every()
+            </button>
+
+            <button class="topic" data-topic="reduce">
+                reduce()
+            </button>
+
+            <button class="topic" data-topic="includes">
+                includes()
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         DAY 5
+    ====================================================== -->
+
+    <section class="max-w-7xl mx-auto px-6 pb-10">
+
+        <div class="bg-[#2C5F2D] text-white
+                    rounded-t-2xl p-5">
+
+            <h2 class="text-2xl font-bold">
+                Day 5 – Array, Object & AOO
+            </h2>
+
+            <p class="text-[#97BC62] mt-1">
+                Real-world data structures
+            </p>
+
+        </div>
+
+
+        <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4
+                    gap-4 bg-white p-6 rounded-b-2xl shadow">
+
+            <button class="topic" data-topic="array">
+                Array
+            </button>
+
+            <button class="topic" data-topic="object">
+                Object
+            </button>
+
+            <button class="topic" data-topic="aoo">
+                Array of Objects
+            </button>
+
+            <button class="topic" data-topic="destructuring">
+                Destructuring
+            </button>
+
+            <button class="topic" data-topic="spread">
+                Spread Operator
+            </button>
+
+            <button class="topic" data-topic="rest">
+                Rest Operator
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         DAY 6
+    ====================================================== -->
+
+    <section class="max-w-7xl mx-auto px-6 pb-10">
+
+        <div class="bg-[#2C5F2D] text-white
+                    rounded-t-2xl p-5">
+
+            <h2 class="text-2xl font-bold">
+                Day 6 – Object Methods
+            </h2>
+
+            <p class="text-[#97BC62] mt-1">
+                JavaScript object operations
+            </p>
+
+        </div>
+
+
+        <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4
+                    gap-4 bg-white p-6 rounded-b-2xl shadow">
+
+            <button class="topic" data-topic="objectkeys">
+                Object.keys()
+            </button>
+
+            <button class="topic" data-topic="objectvalues">
+                Object.values()
+            </button>
+
+            <button class="topic" data-topic="objectentries">
+                Object.entries()
+            </button>
+
+            <button class="topic" data-topic="objectassign">
+                Object.assign()
+            </button>
+
+            <button class="topic" data-topic="hasown">
+                hasOwnProperty()
+            </button>
+
+            <button class="topic" data-topic="optional">
+                Optional Chaining
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         DAY 7
+    ====================================================== -->
+
+    <section class="max-w-7xl mx-auto px-6 pb-10">
+
+        <div class="bg-[#2C5F2D] text-white
+                    rounded-t-2xl p-5">
+
+            <h2 class="text-2xl font-bold">
+                Day 7 – Asynchronous JavaScript
+            </h2>
+
+            <p class="text-[#97BC62] mt-1">
+                Synchronous, asynchronous and Promise
+            </p>
+
+        </div>
+
+
+        <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4
+                    gap-4 bg-white p-6 rounded-b-2xl shadow">
+
+            <button class="topic" data-topic="sync">
+                Synchronous
+            </button>
+
+            <button class="topic" data-topic="asyncprocess">
+                Asynchronous
+            </button>
+
+            <button class="topic" data-topic="callstack">
+                Call Stack
+            </button>
+
+            <button class="topic" data-topic="promise">
+                Promise
+            </button>
+
+            <button class="topic" data-topic="resolve">
+                resolve()
+            </button>
+
+            <button class="topic" data-topic="reject">
+                reject()
+            </button>
+
+            <button class="topic" data-topic="then">
+                then()
+            </button>
+
+            <button class="topic" data-topic="catch">
+                catch()
+            </button>
+
+            <button class="topic" data-topic="finally">
+                finally()
+            </button>
+
+            <button class="topic" data-topic="asyncawait">
+                async / await
+            </button>
+
+            <button class="topic" data-topic="trycatch">
+                try / catch
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         DAY 8
+    ====================================================== -->
+
+    <section class="max-w-7xl mx-auto px-6 pb-10">
+
+        <div class="bg-[#2C5F2D] text-white
+                    rounded-t-2xl p-5">
+
+            <h2 class="text-2xl font-bold">
+                Day 8 – DOM + Promise
+            </h2>
+
+            <p class="text-[#97BC62] mt-1">
+                JavaScript with HTML, storage and APIs
+            </p>
+
+        </div>
+
+
+        <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4
+                    gap-4 bg-white p-6 rounded-b-2xl shadow">
+
+            <button class="topic" data-topic="document">
+                document
+            </button>
+
+            <button class="topic" data-topic="getelement">
+                getElementById()
+            </button>
+
+            <button class="topic" data-topic="queryselector">
+                querySelector()
+            </button>
+
+            <button class="topic" data-topic="queryall">
+                querySelectorAll()
+            </button>
+
+            <button class="topic" data-topic="textcontent">
+                textContent
+            </button>
+
+            <button class="topic" data-topic="innerhtml">
+                innerHTML
+            </button>
+
+            <button class="topic" data-topic="value">
+                value
+            </button>
+
+            <button class="topic" data-topic="style">
+                style
+            </button>
+
+            <button class="topic" data-topic="classlist">
+                classList
+            </button>
+
+            <button class="topic" data-topic="createelement">
+                createElement()
+            </button>
+
+            <button class="topic" data-topic="append">
+                append()
+            </button>
+
+            <button class="topic" data-topic="remove">
+                remove()
+            </button>
+
+            <button class="topic" data-topic="addevent">
+                addEventListener()
+            </button>
+
+            <button class="topic" data-topic="form">
+                Form Handling
+            </button>
+
+            <button class="topic" data-topic="validation">
+                Validation
+            </button>
+
+            <button class="topic" data-topic="localstorage">
+                localStorage
+            </button>
+
+            <button class="topic" data-topic="sessionstorage">
+                sessionStorage
+            </button>
+
+            <button class="topic" data-topic="stringify">
+                JSON.stringify()
+            </button>
+
+            <button class="topic" data-topic="parse">
+                JSON.parse()
+            </button>
+
+            <button class="topic" data-topic="fetch">
+                fetch()
+            </button>
+
+            <button class="topic" data-topic="api">
+                API
+            </button>
+
+            <button class="topic" data-topic="get">
+                GET
+            </button>
+
+            <button class="topic" data-topic="post">
+                POST
+            </button>
+
+            <button class="topic" data-topic="put">
+                PUT
+            </button>
+
+            <button class="topic" data-topic="patch">
+                PATCH
+            </button>
+
+            <button class="topic" data-topic="delete">
+                DELETE
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         LEARNING PANEL
+    ====================================================== -->
+
+    <section id="learningSection"
+        class="max-w-7xl mx-auto px-6 pb-14">
+
+        <div id="learningPanel"
+            class="hidden bg-white rounded-3xl shadow-lg overflow-hidden">
+
+
+            <!-- HEADER -->
+
+            <div class="bg-[#2C5F2D] text-white p-7">
+
+                <p class="text-[#97BC62] font-bold">
+                    SELECTED TOPIC
+                </p>
+
+                <h2 id="topicTitle"
+                    class="text-3xl md:text-4xl font-bold mt-2">
+                </h2>
+
+            </div>
+
+
+            <!-- CONTENT -->
+
+            <div class="p-6 md:p-8 space-y-7">
+
+
+                <!-- DEFINITION -->
+
+                <div>
+
+                    <h3 class="text-xl font-bold text-[#2C5F2D]">
+                        1. Definition
+                    </h3>
+
+                    <p id="topicDefinition"
+                        class="mt-3 text-gray-600 leading-7">
+                    </p>
+
+                </div>
+
+
+                <!-- SYNTAX -->
+
+                <div>
+
+                    <h3 class="text-xl font-bold text-[#2C5F2D]">
+                        2. Syntax
+                    </h3>
+
+                    <pre id="topicSyntax"
+                        class="mt-3 bg-gray-900 text-green-300
+                               p-5 rounded-xl overflow-x-auto">
+                    </pre>
+
+                </div>
+
+
+                <!-- REAL CODE -->
+
+                <div>
+
+                    <h3 class="text-xl font-bold text-[#2C5F2D]">
+                        3. Real Code
+                    </h3>
+
+                    <pre id="topicCode"
+                        class="mt-3 bg-gray-900 text-yellow-200
+                               p-5 rounded-xl overflow-x-auto">
+                    </pre>
+
+                </div>
+
+
+                <!-- OUTPUT -->
+
+                <div>
+
+                    <h3 class="text-xl font-bold text-[#2C5F2D]">
+                        4. Output
+                    </h3>
+
+                    <div id="topicOutput"
+                        class="mt-3 bg-[#97BC62]
+                               text-[#2C5F2D]
+                               p-5 rounded-xl
+                               font-bold whitespace-pre-wrap">
+                    </div>
+
+                </div>
+
+
+                <!-- CLOSE -->
+
+                <button id="closeBtn"
+                    class="bg-[#2C5F2D]
+                           text-white
+                           px-5 py-3
+                           rounded-xl
+                           font-bold
+                           hover:bg-[#97BC62]
+                           hover:text-[#2C5F2D]
+                           transition">
+
+                    Close Topic
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="bg-[#2C5F2D] text-white text-center py-6">
+
+        <p>
+            GreenTech JavaScript Practice
+        </p>
+
+        <p class="text-[#97BC62] text-sm mt-1">
+            Day 1 → Day 8
+        </p>
+
+    </footer>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script src="./js/script.js"></script>
+
+</body>
+
+</html>
