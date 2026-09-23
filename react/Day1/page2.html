@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>React Basics Notes | Page 2</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            violet: "#5F0A87",
+            dahlia: "#EC9780",
+            cream: "#FFF8F5"
+          },
+          boxShadow: {
+            soft: "0 12px 35px rgba(95,10,135,0.12)"
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-cream text-slate-800">
+  <header class="sticky top-0 z-50 bg-violet text-white shadow-lg">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4">
+      <a href="index.html" class="text-xl font-extrabold">React<span class="text-dahlia">Notes</span></a>
+      <div class="flex gap-2 text-sm font-semibold">
+        <a href="index.html" class="rounded-full px-4 py-2 hover:bg-white/15">Page 1</a>
+        <a href="page2.html" class="rounded-full bg-white/15 px-4 py-2">Page 2</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="mx-auto max-w-7xl px-5 py-10">
+    <section class="mb-10 rounded-3xl bg-gradient-to-br from-violet to-[#7d2aa3] p-8 text-white shadow-soft md:p-12">
+      <span class="inline-block rounded-full bg-dahlia px-4 py-1 text-sm font-bold text-violet">REACT CORE CONCEPTS</span>
+      <h1 class="mt-4 text-4xl font-black md:text-6xl">DOM, Virtual DOM & Rendering</h1>
+      <p class="mt-4 max-w-3xl text-lg leading-8 text-white/90">
+        Understand what happens when React displays a component and when state or props change.
+        The goal is to understand the flow, not memorize difficult words.
+      </p>
+      <a href="#flow" class="mt-7 inline-block rounded-xl bg-dahlia px-5 py-3 font-bold text-violet">See Rendering Flow ↓</a>
+    </section>
+
+    <section class="mb-10">
+      <div class="mb-5">
+        <p class="font-bold uppercase tracking-widest text-violet">Task 4</p>
+        <h2 class="text-3xl font-black">DOM, Virtual DOM & Reconciliation</h2>
+      </div>
+      <div class="grid gap-5 md:grid-cols-2">
+        <article class="card"><h3>1. What is DOM?</h3><p>DOM stands for Document Object Model. The browser represents the HTML document as a tree of objects. JavaScript can use the DOM to read or change the page.</p><div class="easy">Think: HTML page → browser creates a tree → JavaScript can update it.</div></article>
+        <article class="card"><h3>2. What is Virtual DOM?</h3><p>In React discussions, the Virtual DOM refers to React’s in-memory representation of the UI. React uses its element tree and rendering process to determine what the browser DOM should become.</p><div class="easy">It is a lightweight representation used during React's UI update process.</div></article>
+        <article class="card"><h3>3. DOM vs Virtual DOM</h3><div class="overflow-x-auto"><table><thead><tr><th>DOM</th><th>Virtual DOM / React tree</th></tr></thead><tbody><tr><td>Browser's actual document structure</td><td>In-memory representation used by React</td></tr><tr><td>Changes affect the browser document</td><td>Helps React calculate required UI changes</td></tr><tr><td>Managed by the browser</td><td>Managed by React's rendering system</td></tr></tbody></table></div><div class="easy">React does not update the whole browser DOM just because a component re-renders.</div></article>
+        <article class="card"><h3>4. What is Reconciliation?</h3><p>Reconciliation is the process React uses to determine how the current rendered UI should change when a new render result is produced.</p><div class="easy">Old UI result + New UI result → React figures out what needs to change.</div></article>
+        <article class="card"><h3>5. What is Diffing?</h3><p>Diffing is the comparison of the previous and new React element trees/results to identify differences.</p><div class="easy">Diffing = finding what is different between old and new UI descriptions.</div></article>
+        <article class="card"><h3>6. How does React identify UI changes?</h3><p>React compares the previous and new results. Element type, position, props and especially stable keys for lists help React determine what should be preserved, updated, added or removed.</p><div class="easy">React compares UI descriptions instead of blindly rebuilding the whole DOM.</div></article>
+        <article class="card md:col-span-2"><h3>7. Why is key important while rendering lists?</h3><p>A key gives each list item a stable identity. React can use that identity to match items between renders and handle insertions, removals and reordering more correctly.</p><pre>const users = [
+  { id: 1, name: "Sam" },
+  { id: 2, name: "Riya" }
+];
+
+users.map(user =>
+  &lt;p key={user.id}&gt;{user.name}&lt;/p&gt;
+);</pre><div class="easy">Use a stable unique ID when possible. Avoid using array index as a key when list items can be reordered, inserted or removed.</div></article>
+      </div>
+    </section>
+
+    <section id="flow" class="mb-10">
+      <div class="mb-5">
+        <p class="font-bold uppercase tracking-widest text-violet">Task 5</p>
+        <h2 class="text-3xl font-black">React Rendering Process</h2>
+      </div>
+
+      <div class="mb-8 rounded-3xl bg-white p-6 shadow-soft md:p-8">
+        <div class="grid gap-3 text-center font-bold md:grid-cols-3">
+          <div class="step">Component</div><div class="arrow">↓</div><div class="step">JSX</div>
+          <div class="arrow hidden md:block">↓</div><div></div><div class="arrow hidden md:block">↓</div>
+          <div class="step">Rendering</div><div class="arrow">↓</div><div class="step">React Element Tree</div>
+          <div class="arrow hidden md:block">↓</div><div></div><div class="arrow hidden md:block">↓</div>
+          <div class="step">State / Props Change</div><div class="arrow">↓</div><div class="step">Re-render</div>
+          <div class="arrow hidden md:block">↓</div><div></div><div class="arrow hidden md:block">↓</div>
+          <div class="step">Reconciliation + Diffing</div><div class="arrow">↓</div><div class="step">Required DOM Update</div>
+          <div class="md:col-span-3 arrow">↓</div>
+          <div class="step md:col-span-3">Browser UI</div>
+        </div>
+      </div>
+
+      <div class="grid gap-5 md:grid-cols-2">
+        <article class="card"><h3>1. What is Rendering?</h3><p>Rendering is when React calls a component to calculate the UI representation for the current props and state.</p><div class="easy">Component runs → React gets the UI description.</div></article>
+        <article class="card"><h3>2. What is Re-rendering?</h3><p>Re-rendering means React runs a component again to produce a new UI result after relevant changes, such as state or parent updates.</p><div class="easy">Re-render ≠ reload the browser page.</div></article>
+        <article class="card"><h3>3. What causes a component to re-render?</h3><ul class="list-disc space-y-2 pl-6 text-slate-600"><li>Its state changes.</li><li>Its parent re-renders and React renders the child as part of that update, subject to optimization.</li><li>Its props change as a result of a parent update.</li><li>A context value it reads changes.</li></ul><div class="easy">A re-render is a React rendering update, not a full browser refresh.</div></article>
+        <article class="card"><h3>4. Does re-render recreate the complete browser DOM?</h3><p>No. A component re-render produces a new React UI result. React then determines what actual DOM changes are necessary and applies the required updates.</p><div class="easy">Only the necessary DOM changes are committed; the entire page is not blindly recreated.</div></article>
+        <article class="card"><h3>5. What happens during reconciliation?</h3><p>React takes the new render result and compares it with the previous result. It determines which parts can be reused and which need updates, insertions or removals, then commits the necessary changes to the browser DOM.</p><div class="easy">Compare → decide → commit required UI changes.</div></article>
+        <article class="card"><h3>6. Relationship: Virtual DOM, Diffing & Reconciliation</h3><p>The React element tree provides a description of the UI in memory. During reconciliation, React compares the previous and new results; this comparison is commonly called diffing. React then commits the necessary DOM updates.</p><div class="easy">Simple idea: UI description → compare → update only what is needed.</div></article>
+        <article class="card md:col-span-2"><h3>7. Explain the React rendering process in your own words</h3><p>When a React component runs, it returns JSX. React turns that JSX into a React element tree that describes the UI. When state, props or another relevant input changes, React renders again and gets a new result. React compares the old and new results during reconciliation, identifies the differences, and commits the required changes to the browser DOM. The browser then shows the updated UI.</p><div class="easy">Class answer: “React first creates a UI description from the component and JSX. When data changes, the component can render again. React compares the previous and new UI descriptions, finds the differences, and updates only the required parts of the browser DOM.”</div></article>
+      </div>
+    </section>
+
+    <section class="rounded-3xl bg-violet p-8 text-white shadow-soft">
+      <h2 class="text-2xl font-black">Quick Revision</h2>
+      <div class="mt-5 grid gap-4 md:grid-cols-4">
+        <div class="rounded-2xl bg-white/10 p-4"><b>Component</b><p class="mt-1 text-sm text-white/75">Reusable UI function.</p></div>
+        <div class="rounded-2xl bg-white/10 p-4"><b>JSX</b><p class="mt-1 text-sm text-white/75">JavaScript syntax for describing UI.</p></div>
+        <div class="rounded-2xl bg-white/10 p-4"><b>Reconciliation</b><p class="mt-1 text-sm text-white/75">React determines required UI changes.</p></div>
+        <div class="rounded-2xl bg-white/10 p-4"><b>Key</b><p class="mt-1 text-sm text-white/75">Stable identity for list items.</p></div>
+      </div>
+    </section>
+
+    <div class="mt-8 flex justify-between gap-4">
+      <a href="index.html" class="rounded-2xl border-2 border-violet px-6 py-3 font-bold text-violet">← Previous</a>
+      <a href="#flow" class="rounded-2xl bg-dahlia px-6 py-3 font-bold text-violet">Back to Flow ↑</a>
+    </div>
+  </main>
+
+  <footer class="mt-12 bg-violet px-5 py-8 text-center text-white">
+    <p class="font-bold">ReactNotes • Learn React step by step</p>
+    <p class="mt-1 text-sm text-white/70">Ultra Violet × Blooming Dahlia</p>
+  </footer>
+
+  <style>
+    .card{border:1px solid #eadbea;background:#fff;border-radius:1.25rem;padding:1.5rem;box-shadow:0 12px 35px rgba(95,10,135,.08)}
+    .card h3{font-size:1.15rem;font-weight:800;color:#5F0A87;margin-bottom:.75rem}
+    .card p{line-height:1.75;color:#475569}
+    .easy{margin-top:1rem;border-left:4px solid #EC9780;background:#fff4f0;padding:.85rem 1rem;border-radius:.75rem;font-weight:600;color:#5F0A87}
+    pre{margin-top:1rem;overflow:auto;border-radius:.85rem;background:#20152a;color:#f8f4fa;padding:1rem;font-size:.875rem;line-height:1.6}
+    code{border-radius:.35rem;background:#f4e7f5;padding:.12rem .35rem;color:#5F0A87}
+    table{width:100%;border-collapse:collapse;min-width:520px}
+    th,td{border:1px solid #eadbea;padding:.8rem;text-align:left}
+    th{background:#f6edf7;color:#5F0A87}
+    td{color:#475569}
+    .step{border-radius:1rem;background:#f6edf7;padding:1rem;color:#5F0A87}
+    .arrow{font-size:1.5rem;color:#EC9780}
+  </style>
+</body>
+</html>

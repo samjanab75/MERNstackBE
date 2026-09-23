@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>React Basics Notes | Page 1</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            violet: "#5F0A87",
+            dahlia: "#EC9780",
+            cream: "#FFF8F5"
+          },
+          boxShadow: {
+            soft: "0 12px 35px rgba(95,10,135,0.12)"
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-cream text-slate-800">
+  <header class="sticky top-0 z-50 bg-violet text-white shadow-lg">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4">
+      <a href="index.html" class="text-xl font-extrabold tracking-tight">React<span class="text-dahlia">Notes</span></a>
+      <div class="flex gap-2 text-sm font-semibold">
+        <a href="index.html" class="rounded-full bg-white/15 px-4 py-2">Page 1</a>
+        <a href="page2.html" class="rounded-full px-4 py-2 hover:bg-white/15">Page 2</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="mx-auto max-w-7xl px-5 py-10">
+    <section class="mb-10 rounded-3xl bg-gradient-to-br from-violet to-[#7d2aa3] p-8 text-white shadow-soft md:p-12">
+      <span class="inline-block rounded-full bg-dahlia px-4 py-1 text-sm font-bold text-violet">REACT BASICS</span>
+      <h1 class="mt-4 text-4xl font-black md:text-6xl">React Reading Notes</h1>
+      <p class="mt-4 max-w-3xl text-lg leading-8 text-white/90">
+        Easy explanations for React Basics, Components and JSX. Read the answer, understand the simple meaning,
+        and use the quick explanation when you need to explain it in class or interview.
+      </p>
+      <div class="mt-7 flex flex-wrap gap-3 text-sm font-bold">
+        <a href="#task1" class="rounded-xl bg-white px-4 py-3 text-violet">Task 1</a>
+        <a href="#task2" class="rounded-xl bg-white/15 px-4 py-3">Task 2</a>
+        <a href="#task3" class="rounded-xl bg-white/15 px-4 py-3">Task 3</a>
+        <a href="page2.html" class="rounded-xl bg-dahlia px-4 py-3 text-violet">Next Page →</a>
+      </div>
+    </section>
+
+    <section id="task1" class="mb-10">
+      <div class="mb-5">
+        <p class="font-bold uppercase tracking-widest text-violet">Task 1</p>
+        <h2 class="text-3xl font-black">React Basics</h2>
+      </div>
+      <div class="grid gap-5 md:grid-cols-2">
+        <article class="card"><h3>1. What is React?</h3><p>React is a JavaScript library used to build user interfaces, especially interactive web applications. It lets us create the UI using small reusable components.</p><div class="easy">Easy to say: “React helps us build interactive websites using reusable components.”</div></article>
+        <article class="card"><h3>2. Why do we use React?</h3><p>We use React to create fast, interactive and maintainable user interfaces. It makes large UI projects easier to organize because the UI can be divided into components.</p><div class="easy">Easy to say: “React makes UI development easier by using reusable components and efficient updates.”</div></article>
+        <article class="card"><h3>3. Is React a library or framework?</h3><p>React is a <strong>JavaScript library</strong> for building user interfaces. It mainly focuses on the UI layer. Developers can add other libraries for routing, data fetching and other needs.</p><div class="easy">Remember: React = Library, not a full framework by itself.</div></article>
+        <article class="card"><h3>4. Main features of React</h3><p>Important features include components, JSX, declarative UI, one-way data flow, state and props, reusable UI, and efficient DOM updates through React’s rendering and reconciliation process.</p><div class="easy">Shortcut: Components + JSX + State/Props + Declarative UI + Efficient Updates.</div></article>
+        <article class="card"><h3>5. What is a Single Page Application (SPA)?</h3><p>A SPA is a web application where the browser loads the main page and JavaScript updates the displayed content without requiring a full page reload for every navigation.</p><div class="easy">Example: In a React app, changing from Home to About can update the UI without refreshing the whole browser page.</div></article>
+        <article class="card"><h3>6. What is declarative UI?</h3><p>Declarative UI means we describe <strong>what the UI should look like</strong> for a particular state. React handles the detailed DOM changes needed to reach that result.</p><div class="easy">Easy to say: “I describe what I want; React handles how to update it.”</div></article>
+      </div>
+    </section>
+
+    <section id="task2" class="mb-10">
+      <div class="mb-5">
+        <p class="font-bold uppercase tracking-widest text-violet">Task 2</p>
+        <h2 class="text-3xl font-black">Components</h2>
+      </div>
+      <div class="grid gap-5 md:grid-cols-2">
+        <article class="card"><h3>1. What is a Component?</h3><p>A component is an independent, reusable part of a React UI. It usually contains the logic and UI for one part of the application.</p><div class="easy">Examples: Navbar, Button, LoginForm, ProductCard.</div></article>
+        <article class="card"><h3>2. Why do we use Components?</h3><p>Components divide a large UI into smaller pieces. This makes code easier to understand, reuse, test and maintain.</p><div class="easy">Instead of one huge file, we create small meaningful parts.</div></article>
+        <article class="card"><h3>3. What is a Functional Component?</h3><p>A functional component is a JavaScript function that returns React UI, usually written with JSX.</p><pre>function Welcome() {
+  return &lt;h1&gt;Hello React&lt;/h1&gt;;
+}</pre><div class="easy">Function → returns JSX → React displays it.</div></article>
+        <article class="card"><h3>4. Component-Based Architecture</h3><p>It is an approach where an application is built by combining small, independent and reusable components.</p><div class="easy">Think of a website like LEGO: each component is one reusable block.</div></article>
+        <article class="card"><h3>5. What is a Component Tree?</h3><p>A component tree shows the parent-child relationship between components.</p><pre>App
+├── Navbar
+├── Home
+│   ├── Hero
+│   └── ProductCard
+└── Footer</pre><div class="easy">App is the parent. Navbar, Home and Footer are its children.</div></article>
+        <article class="card"><h3>6. Why capital letter?</h3><p>React uses capitalization to distinguish custom components from normal HTML elements. <code>&lt;Header /&gt;</code> is treated as a component, while <code>&lt;header&gt;</code> is an HTML element.</p><div class="easy">Custom React component names should start with a capital letter.</div></article>
+        <article class="card md:col-span-2"><h3>7. What is a reusable component?</h3><p>A reusable component is designed so the same component can be used in multiple places, often with different data through props.</p><pre>function Button({ text }) {
+  return &lt;button&gt;{text}&lt;/button&gt;;
+}
+
+// &lt;Button text="Login" /&gt;
+// &lt;Button text="Register" /&gt;</pre><div class="easy">Write once → use many times.</div></article>
+      </div>
+    </section>
+
+    <section id="task3" class="mb-10">
+      <div class="mb-5">
+        <p class="font-bold uppercase tracking-widest text-violet">Task 3</p>
+        <h2 class="text-3xl font-black">JSX</h2>
+      </div>
+      <div class="grid gap-5 md:grid-cols-2">
+        <article class="card"><h3>1. What is JSX?</h3><p>JSX stands for JavaScript XML. It is a syntax extension that lets us write HTML-like UI syntax inside JavaScript code.</p><div class="easy">JSX makes React UI code easier to read and write.</div></article>
+        <article class="card"><h3>2. Why use JSX?</h3><p>JSX keeps the UI structure close to the JavaScript logic that controls it. It also makes component code more readable.</p><div class="easy">JSX helps us describe UI clearly inside a component.</div></article>
+        <article class="card"><h3>3. Is JSX HTML?</h3><p>No. JSX looks similar to HTML, but it is JavaScript syntax. React tooling transforms JSX into JavaScript that React can use.</p><div class="easy">HTML and JSX look similar, but JSX is not plain HTML.</div></article>
+        <article class="card"><h3>4. JavaScript expressions inside JSX</h3><p>Use curly braces <code>{ }</code> to place JavaScript expressions inside JSX.</p><pre>const name = "Sam";
+
+return &lt;h1&gt;Hello {name}&lt;/h1&gt;;</pre><div class="easy">Curly braces tell JSX: “Evaluate this JavaScript expression.”</div></article>
+        <article class="card"><h3>5. Why className instead of class?</h3><p>In JSX, we use <code>className</code> to assign CSS classes. <code>class</code> is a JavaScript keyword, so JSX uses the DOM property name <code>className</code>.</p><pre>&lt;div className="card"&gt;
+  Hello
+&lt;/div&gt;</pre></article>
+        <article class="card"><h3>6. What is React Fragment?</h3><p>A Fragment lets a component return multiple elements without adding an unnecessary wrapper element to the DOM.</p><pre>return (
+  &lt;&gt;
+    &lt;h1&gt;Title&lt;/h1&gt;
+    &lt;p&gt;Text&lt;/p&gt;
+  &lt;/&gt;
+);</pre><div class="easy">Fragment groups elements without creating an extra HTML element.</div></article>
+        <article class="card md:col-span-2"><h3>7. Important JSX rules</h3><ul class="list-disc space-y-2 pl-6"><li>Return one parent element or use a Fragment.</li><li>Close every tag: <code>&lt;img /&gt;</code>, <code>&lt;input /&gt;</code>.</li><li>Use <code>className</code> instead of <code>class</code>.</li><li>Use camelCase for many DOM properties and event handlers, such as <code>onClick</code>.</li><li>Use <code>{ }</code> for JavaScript expressions.</li><li>Component names start with a capital letter.</li></ul><div class="easy">Remember: JSX looks like HTML, but it follows JavaScript/React rules.</div></article>
+      </div>
+    </section>
+
+    <div class="flex justify-end">
+      <a href="page2.html" class="rounded-2xl bg-violet px-6 py-3 font-bold text-white shadow-lg hover:-translate-y-0.5">Continue to Page 2 →</a>
+    </div>
+  </main>
+
+  <footer class="mt-12 bg-violet px-5 py-8 text-center text-white">
+    <p class="font-bold">ReactNotes • Learn React step by step</p>
+    <p class="mt-1 text-sm text-white/70">Ultra Violet × Blooming Dahlia</p>
+  </footer>
+
+  <style>
+    .card{border:1px solid #eadbea;background:#fff;border-radius:1.25rem;padding:1.5rem;box-shadow:0 12px 35px rgba(95,10,135,.08)}
+    .card h3{font-size:1.15rem;font-weight:800;color:#5F0A87;margin-bottom:.75rem}
+    .card p{line-height:1.75;color:#475569}
+    .easy{margin-top:1rem;border-left:4px solid #EC9780;background:#fff4f0;padding:.85rem 1rem;border-radius:.75rem;font-weight:600;color:#5F0A87}
+    pre{margin-top:1rem;overflow:auto;border-radius:.85rem;background:#20152a;color:#f8f4fa;padding:1rem;font-size:.875rem;line-height:1.6}
+    code{border-radius:.35rem;background:#f4e7f5;padding:.12rem .35rem;color:#5F0A87}
+  </style>
+</body>
+</html>
