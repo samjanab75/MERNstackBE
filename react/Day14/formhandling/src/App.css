@@ -1,0 +1,168 @@
+ 
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f3fb;
+  color: #29243d;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+.header {
+  background: linear-gradient(135deg, #50368f, #8064d9);
+  color: white;
+  text-align: center;
+  padding: 35px 20px;
+}
+
+.header h1 {
+  margin: 0 0 10px;
+}
+
+.header p {
+  margin: 0;
+  color: #eee8ff;
+}
+
+.container {
+  width: min(100% - 32px, 900px);
+  margin: 30px auto;
+}
+
+.card {
+  background: white;
+  padding: 24px;
+  margin-bottom: 22px;
+  border-radius: 14px;
+  border: 1px solid #e6e0f5;
+  box-shadow: 0 4px 16px #30205b0d;
+}
+
+.card h2 {
+  margin-top: 0;
+  color: #50368f;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input {
+  flex: 1;
+  min-width: 180px;
+  padding: 12px;
+  border: 1px solid #d8d2e8;
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px;
+}
+
+input:focus {
+  border-color: #8064d9;
+  box-shadow: 0 0 0 3px #8064d91a;
+}
+
+button {
+  border: none;
+  border-radius: 8px;
+  padding: 11px 15px;
+  background: #684ac0;
+  color: white;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #50368f;
+  transform: translateY(-1px);
+}
+
+.item-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.item-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 13px 0;
+  border-bottom: 1px solid #eeeaf5;
+}
+
+.item-list li:last-child {
+  border-bottom: none;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.delete-btn {
+  background: #d83e52;
+}
+
+.delete-btn:hover {
+  background: #b42335;
+}
+
+.secondary-btn {
+  background: #eae4fb;
+  color: #50368f;
+}
+
+.secondary-btn:hover {
+  background: #d9cefa;
+  color: #33215f;
+}
+
+.empty {
+  color: #777187;
+  font-size: 14px;
+}
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  color: #777187;
+  font-size: 13px;
+}
+
+@media (max-width: 500px) {
+  .container {
+    width: calc(100% - 20px);
+    margin: 16px auto;
+  }
+
+  .card {
+    padding: 17px;
+  }
+
+  form {
+    flex-direction: column;
+  }
+
+  input {
+    width: 100%;
+  }
+
+  form button {
+    width: 100%;
+  }
+}
