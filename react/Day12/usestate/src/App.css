@@ -1,0 +1,316 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: "Inter", Arial, sans-serif;
+  color: #27243b;
+  background: #f5f5fb;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button {
+  font: inherit;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+.header {
+  background: linear-gradient(135deg, #48328d, #8064d9);
+  color: white;
+  text-align: center;
+  padding: 42px 20px;
+}
+
+.header h1 {
+  font-size: clamp(25px, 4vw, 36px);
+  margin: 0 0 12px;
+}
+
+.header p {
+  color: #e9e2ff;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.container {
+  width: min(100% - 32px, 1050px);
+  margin: 30px auto;
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid #e9e5f5;
+  border-radius: 16px;
+  padding: 26px;
+  margin-bottom: 24px;
+  box-shadow: 0 5px 22px rgba(49, 34, 94, 0.05);
+}
+
+.card h2 {
+  font-size: 21px;
+  margin: 10px 0 20px;
+  color: #33255f;
+}
+
+.task-number {
+  display: inline-block;
+  color: #684ac0;
+  background: #f0ebff;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.status-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.status-row p {
+  margin: 0;
+}
+
+.badge {
+  display: inline-block;
+  border-radius: 20px;
+  padding: 7px 12px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.on {
+  color: #147344;
+  background: #dcfce7;
+}
+
+.off {
+  color: #b42335;
+  background: #fee2e2;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin: 4px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.primary {
+  color: white;
+  background: #684ac0;
+}
+
+.primary:hover {
+  background: #50368f;
+}
+
+.secondary {
+  color: #50368f;
+  background: #eee9ff;
+}
+
+.secondary:hover {
+  background: #ded4ff;
+}
+
+.danger {
+  color: white;
+  background: #d83e52;
+}
+
+.danger:hover {
+  background: #b42335;
+}
+
+.liked {
+  color: #be185d;
+  background: #fce7f3;
+  border-color: #fbcfe8;
+}
+
+.post {
+  padding: 18px;
+  background: #faf9ff;
+  border: 1px solid #eee9fa;
+  border-radius: 12px;
+}
+
+.post h3 {
+  margin: 0 0 8px;
+}
+
+.post p {
+  color: #706b80;
+}
+
+.success-message {
+  color: #147344 !important;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.details {
+  background: #faf9ff;
+  padding: 12px 18px;
+  border-radius: 10px;
+  margin-bottom: 16px;
+}
+
+.details p {
+  margin: 10px 0;
+}
+
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin: -4px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(min(100%, 220px), 1fr)
+  );
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.item-card {
+  min-width: 0;
+  border: 1px solid #e9e5f5;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.item-card:hover {
+  box-shadow: 0 8px 24px rgba(49, 34, 94, 0.08);
+  transform: translateY(-3px);
+}
+
+.item-card h3 {
+  margin: 12px 0;
+  font-size: 18px;
+}
+
+.product-icon {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  background: #f0ebff;
+  border-radius: 12px;
+  font-size: 25px;
+}
+
+.price {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 0 14px;
+}
+
+.item-card > .badge {
+  margin-bottom: 16px;
+}
+
+.full {
+  width: 100%;
+  margin: 5px 0;
+}
+
+.student-avatar {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #e9e2ff;
+  color: #50368f;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.marks {
+  margin: 0 0 14px;
+  color: #625d73;
+}
+
+.student-actions {
+  width: 100%;
+  margin-top: auto;
+}
+
+.description,
+.empty-message {
+  color: #706b80;
+  line-height: 1.6;
+}
+
+.footer {
+  padding: 18px;
+  text-align: center;
+  color: #777187;
+  font-size: 12px;
+}
+
+@media (max-width: 600px) {
+  .header {
+    padding: 32px 16px;
+  }
+
+  .container {
+    width: calc(100% - 20px);
+    margin: 18px auto;
+  }
+
+  .card {
+    padding: 18px;
+    margin-bottom: 16px;
+  }
+
+  .card h2 {
+    font-size: 19px;
+  }
+
+  .button-group {
+    flex-direction: column;
+  }
+
+  .button-group .btn {
+    width: 100%;
+    margin: 4px 0;
+  }
+}
