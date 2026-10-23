@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  background-color: #fff4e6;
+  color: #3b2118;
+}
+
+/* NAVBAR */
+
+.navbar {
+  background-color: #3b2118;
+  color: #fff4e6;
+
+  padding: 22px 60px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar h2 {
+  font-size: 28px;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links span {
+  color: #fff4e6;
+  cursor: pointer;
+  font-family: Arial, sans-serif;
+}
+
+.nav-links span:hover {
+  color: #c47a44;
+}
+
+/* HOME */
+
+.home {
+  min-height: 500px;
+
+  padding: 100px 20px;
+
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #fff4e6;
+}
+
+.small-title {
+  color: #c47a44;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 3px;
+
+  margin-bottom: 18px;
+}
+
+.home h1 {
+  max-width: 700px;
+
+  color: #3b2118;
+
+  font-size: 52px;
+  line-height: 1.1;
+
+  margin-bottom: 20px;
+}
+
+.home > p:not(.small-title) {
+  max-width: 600px;
+
+  font-family: Arial, sans-serif;
+
+  color: #62483c;
+
+  font-size: 18px;
+  line-height: 1.7;
+
+  margin-bottom: 30px;
+}
+
+.home button {
+  background-color: #c47a44;
+  color: #fff4e6;
+
+  border: none;
+  border-radius: 4px;
+
+  padding: 14px 28px;
+
+  font-size: 16px;
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+.home button:hover {
+  background-color: #3b2118;
+}
+
+/* ABOUT */
+
+.about {
+  padding: 90px 20px;
+
+  text-align: center;
+
+  background-color: #3b2118;
+  color: #fff4e6;
+}
+
+.about .small-title {
+  color: #c47a44;
+}
+
+.about h2 {
+  font-size: 38px;
+  margin-bottom: 25px;
+}
+
+.about p:not(.small-title) {
+  max-width: 750px;
+
+  margin: 0 auto 20px;
+
+  font-family: Arial, sans-serif;
+
+  color: #f5dfcc;
+
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+/* FOOTER */
+
+.footer {
+  padding: 35px 20px;
+
+  text-align: center;
+
+  background-color: #c47a44;
+  color: #3b2118;
+}
+
+.footer h3 {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.footer p {
+  font-family: Arial, sans-serif;
+  margin-bottom: 8px;
+}
