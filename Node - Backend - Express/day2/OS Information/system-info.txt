@@ -1,0 +1,7 @@
+
+OPERATING SYSTEM INFORMATION
+
+Platform: win32
+Architecture: x64
+Hostname: LAPTOP-B0CT9031
+Total RAM: 15.64 GB
